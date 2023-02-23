@@ -1,4 +1,4 @@
-﻿###Note, i need to separate these dear god
+###Note, i need to separate these dear god
 #INVICTUS BASED, FOR REGULAR PANTHEON
 ##edit, found out that the hellenics get access to 2000 lines of code for their dieties. time to go ham
 deity_anuket = { # FERTILITY
@@ -14,8 +14,8 @@ deity_anuket = { # FERTILITY
 		}
 	}
 	icon = deity_kemetic_love_2
-	passive_modifier = { deity_global_food_capacity = deity_global_food_capacity_svalue }
-	omen = { global_monthly_freemen_output = omen_global_freemen_output_svalue } #Bonus from Omen
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { global_freemen_output = omen_global_freemen_output_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_characters_effect = yes
 	}
@@ -171,7 +171,7 @@ deity_min = { # FERTILITY
 	}
 	icon = deity_kemetic_love
 	passive_modifier = { global_monthly_food_modifier = deity_global_monthly_food_modifier_svalue }
-	omen = { global_population_growth = omen_global_population_growth_svalue } #Bonus from Omen
+	omen = { global_population_growth = omen_global_population_growth } #Bonus from Omen
 	on_activate = {
 		fertility_apotheosis_food_effect = yes
 	}
@@ -196,7 +196,7 @@ deity_heqet = { # FERTILITY
 		}
 	}
 	icon = deity_kemetic_love_2
-	passive_modifier = { global_supply_limit_modifier_svalue = deity_global_supply_limit_modifier_svalue }
+	passive_modifier = { global_supply_limit_modifier = deity_global_supply_limit_modifier_svalue }
 	omen = { global_commerce_modifier = deity_global_commerce_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_civic_tech_effect = yes
@@ -502,12 +502,12 @@ deity_nebothoth = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = mesopotamian_pantheon
+					target = mesopotamian_religion
 					value >= rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = mesopotamian_pantheon
+				religion = mesopotamian_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= rare_deity_svalue
@@ -540,12 +540,12 @@ deity_nerganubis = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = mesopotamian_pantheon
+					target = mesopotamian_religion
 					value >= common_deity_svalue
 				}
 			}
 			AND = {
-				religion = mesopotamian_pantheon
+				religion = mesopotamian_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= common_deity_svalue
@@ -578,12 +578,12 @@ deity_shamashra = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = mesopotamian_pantheon
+					target = mesopotamian_religion
 					value >= common_deity_svalue
 				}
 			}
 			AND = {
-				religion = mesopotamian_pantheon
+				religion = mesopotamian_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= common_deity_svalue
@@ -616,12 +616,12 @@ deity_ishtar_hathor = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = mesopotamian_pantheon
+					target = mesopotamian_religion
 					value >= rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = mesopotamian_pantheon
+				religion = mesopotamian_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= rare_deity_svalue
@@ -655,12 +655,12 @@ deity_woden_thoth = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = germanic_pantheon
+				religion = germanic_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -693,12 +693,12 @@ deity_isis_freya = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = germanic_pantheon
+				religion = germanic_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -731,12 +731,12 @@ deity_tuistamun = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = germanic_pantheon
+				religion = germanic_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -769,12 +769,12 @@ deity_apepirmin = { #Might make this some kind of evil god thing with a negative
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = germanic_pantheon
+				religion = germanic_religion
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -807,14 +807,14 @@ deity_monthunraz = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = germanic_pantheon
+					target = germanic_religion
 					value >= very_rare_deity_svalue
 				}
 			}
@@ -846,12 +846,12 @@ deity_al_lathor = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -884,12 +884,12 @@ deity_uzzamaat = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -922,12 +922,12 @@ deity_al_kuthoth = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -963,12 +963,12 @@ deity_maher_sobek= {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -1002,12 +1002,12 @@ deity_hathor_astwer = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
@@ -1041,12 +1041,12 @@ deity_beherhapy = {
 			AND = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
-					target = arabic_pantheon
+					target = arabian_pantheon
 					value >= very_rare_deity_svalue
 				}
 			}
 			AND = {
-				religion = arabic_pantheon
+				religion = arabian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
 					value >= very_rare_deity_svalue
