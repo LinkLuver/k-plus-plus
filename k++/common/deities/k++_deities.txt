@@ -1,6 +1,4 @@
-###Note, i need to separate these dear god
-#INVICTUS BASED, FOR REGULAR PANTHEON
-##edit, found out that the hellenics get access to 2000 lines of code for their dieties. time to go ham
+﻿#Regular Kemetic Deities
 deity_anuket = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -31,7 +29,7 @@ deity_sekhmet_bastet = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			very_rare_deity_trigger = {
+			rare_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_sekhmet_bastet = {
@@ -57,7 +55,7 @@ deity_heka = { # CULTURE
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_heka = {
@@ -83,7 +81,7 @@ deity_sobek_ra = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			very_rare_deity_trigger = {
+			rare_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_sobek_ra = {
@@ -135,7 +133,7 @@ deity_apis = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_apis = {
@@ -161,7 +159,7 @@ deity_min = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_min = {
@@ -187,7 +185,7 @@ deity_heqet = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_heqet = {
@@ -213,7 +211,7 @@ deity_satis = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_satis = {
@@ -239,7 +237,7 @@ deity_wepwawet = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			rare_deity_trigger = {
+			common_deity_trigger = {
 				RELIGION = egyptian_pantheon
 			}
 			deity:omen_wepwawet = {
@@ -261,7 +259,32 @@ deity_wepwawet = { # WAR
 	}
 }
 
-#THOTH-HERMES BASED, FOR GREEK SYNCRETICS
+deity_meretseger = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = egyptian_pantheon
+			}
+			deity:omen_meretseger = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_kemetic_wealth_2
+	passive_modifier = { monthly_legitimacy = deity_monthly_legitimacy_svalue }
+	omen = { global_nobles_happyness = deity_global_nobles_happiness_svalue } #Bonus from Omen
+	on_activate = {
+		economy_apotheosis_capital_noble_effect = yes
+	}
+	religion = egyptian_pantheon
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+#GREEK SYNCRETICS
 ##found out that invictus already has a ton for kemetic-greek stuff, c+p from invictus right now as placeholder
 deity_harpocrates = {
 	trigger = {
@@ -303,7 +326,7 @@ deity_harpocrates = {
 	}
 }
 
-#THOTH-HERMES BASED FOR CANAANITE SYNCRETICS
+#CANAANITE SYNCRETICS
 deity_resheph_horus = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -350,14 +373,14 @@ deity_anat_bastet = {
 				religion = egyptian_pantheon
 				religion_pops_in_country = {
 					target = carthaginian_pantheon
-					value >= rare_deity_svalue
+					value >= common_deity_svalue
 				}
 			}
 			AND = {
 				religion = carthaginian_pantheon
 				religion_pops_in_country = {
 					target = egyptian_pantheon
-					value >= rare_deity_svalue
+					value >= common_deity_svalue
 				}
 			}
 			deity:omen_anat_bastet = {
@@ -494,7 +517,7 @@ deity_melqart_osiris = {
 	}
 }
 
-#THOTH-HERMES BASED FOR CHALDEAN SYNCRETICS, MAINLY FICTIONAL
+#CHALDEAN SYNCRETICS, MAINLY FICTIONAL
 deity_nebothoth = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -647,7 +670,7 @@ deity_ishtar_hathor = {
 	}
 }
 
-#TUISITIC SYNCRETISM
+#TUISITIC SYNCRETISM, FICTIONAL
 deity_woden_thoth = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -953,7 +976,7 @@ deity_al_kuthoth = {
 	}
 }
 
-#Next, the axumites, imperator based
+#Next, the axumites
 
 deity_maher_sobek= {
 	trigger = {

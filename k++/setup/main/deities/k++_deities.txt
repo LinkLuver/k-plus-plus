@@ -1,5 +1,5 @@
-﻿deity_manager = {
-	deities_database = { #Mod Deities 476-485 and 503-524
+deity_manager = {
+	deities_database = { #Mod Deities 476-486 and 503-524
 		#Initial Deities
 		476 = {
 			key = omen_anuket
@@ -40,6 +40,10 @@
 		485 = {
 			key = omen_wepwawet
 			deity = deity_wepwawet
+		}
+		486 = {
+			key = omen_meretseger
+			deity = deity_meretseger
 		}
 		#MIND THE GAP
 		503 = { #Canaanite Syncretic
